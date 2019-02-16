@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int h;
@@ -22,7 +23,18 @@ void getAge(){
 
 void hatsize(){
 	double hat = (w/h)*2.9;
-	cout << "Your hat size is: " << hat << endl;
+	cout << "Your Hat size is: " << hat << endl;
+}
+
+void jacketsize(){
+	double jacket;
+	if (age >= 30){
+		jacket = (h*w)/288 + (1/8)*(age/10);
+	}
+	else{
+		jacket = (h*w)/288;
+	}
+	cout << "Your Jacket size is: " << jacket << endl;
 }
 
 int main(){
@@ -31,7 +43,7 @@ int main(){
 	getAge();
 	
 	hatsize();
-	
+	jacketsize();
 	
 	
 	return 0;
