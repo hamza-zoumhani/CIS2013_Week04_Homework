@@ -37,6 +37,16 @@ void jacketsize(){
 	cout << "Your Jacket size is: " << jacket << endl;
 }
 
+void waistsize(){
+	double waist;
+	if(age >= 30){
+		waist = w/5.7 + (1/10)*(age/2);
+	}
+	else{
+		waist = w/5.7;
+	}
+}
+
 int main(){
 	getHeight();
 	getWeight();
@@ -44,7 +54,7 @@ int main(){
 	
 	hatsize();
 	jacketsize();
-	
+	waistsize();
 	
 	return 0;
 }
