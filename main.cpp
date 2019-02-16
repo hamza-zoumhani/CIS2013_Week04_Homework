@@ -28,7 +28,7 @@ void hatsize(){
 
 void jacketsize(){
 	double jacket;
-	if (age >= 30){
+	if (age >= 30 && age% 10 == 0){
 		jacket = (h*w)/288 + (1/8)*(age/10);
 	}
 	else{
@@ -39,7 +39,7 @@ void jacketsize(){
 
 void waistsize(){
 	double waist;
-	if(age >= 30){
+	if(age >= 30 && age%2 == 0){
 		waist = w/5.7 + (1/10)*(age/2);
 	}
 	else{
@@ -48,6 +48,10 @@ void waistsize(){
 }
 
 int main(){
+	cout.setf(ios::fixed);
+	cout.setf(ios::showpoint);
+	cout.precision(3);
+	
 	getHeight();
 	getWeight();
 	getAge();
