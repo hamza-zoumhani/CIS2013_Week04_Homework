@@ -1,9 +1,8 @@
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
-int h;
-int w;
+double h;
+double w;
 int age;
 
 void getHeight(){
@@ -28,7 +27,7 @@ void hatsize(){
 
 void jacketsize(){
 	double jacket;
-	if (age >= 30 && age% 10 == 0){
+	if (age >= 30 && age % 10 == 0){
 		jacket = (h*w)/288 + (1/8)*(age/10);
 	}
 	else{
@@ -39,18 +38,16 @@ void jacketsize(){
 
 void waistsize(){
 	double waist;
-	if(age >= 30 && age%2 == 0){
+	if(age >= 30 && age % 2 == 0){
 		waist = w/5.7 + (1/10)*(age/2);
 	}
 	else{
 		waist = w/5.7;
 	}
+	cout << "Your Waist size is: " << waist << endl;
 }
 
 int main(){
-	cout.setf(ios::fixed);
-	cout.setf(ios::showpoint);
-	cout.precision(3);
 	
 	getHeight();
 	getWeight();
