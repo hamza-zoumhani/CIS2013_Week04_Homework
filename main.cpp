@@ -6,7 +6,7 @@ double w;
 int age;
 
 void getHeight(){
-	cout << "Please enter your Height in inches: " ;
+	cout << "\nPlease enter your Height in inches: " ;
 	cin >> h;
 }
 
@@ -48,14 +48,24 @@ void waistsize(){
 }
 
 int main(){
+	cout << "Welcome to C++ clothing sizes! \n";
+	char again = 'Y' && 'y';
 	
-	getHeight();
-	getWeight();
-	getAge();
-	
-	hatsize();
-	jacketsize();
-	waistsize();
+	do{
+		getHeight();
+		getWeight();
+		getAge();
+		
+		cout << endl;
+		
+		hatsize();
+		jacketsize();
+		waistsize();
+		
+		cout << "\nDo you need to go again (Y/n)? ";
+		cin >> again;
+		
+	}while ('n' != again);
 	
 	return 0;
 }
