@@ -27,8 +27,9 @@ void hatsize(){
 
 void jacketsize(){
 	double jacket;
-	if (age >= 30 && age % 10 == 0){
-		jacket = (h*w)/288 + (1/8)*(age/10);
+	if (age > 39){
+		if( age%10 =0){
+			jacket= (h*w)/288 + (1/8)*(age/10);
 	}
 	else{
 		jacket = (h*w)/288;
